@@ -1,8 +1,8 @@
 export interface Restaurant {
   id: number;
   name: string;
-  category: '한식' | '중식' | '일식' | '분식' | '카페';
-  priceRange: '저렴' | '보통' | '비쌈';
+  category: '한식' | '중식' | '일식' | '양식' | '동남아' | '건강식' | '회식';
+  specialty: string;
   searchQuery: string;
 }
 
@@ -10,150 +10,127 @@ export const restaurants: Restaurant[] = [
   // 한식
   {
     id: 1,
-    name: '상암동 김치찌개',
+    name: '서서울농협 두레우가',
     category: '한식',
-    priceRange: '보통',
-    searchQuery: '상암동 김치찌개'
+    specialty: '한우갈비탕, 불고기전골, 차돌된장찌개',
+    searchQuery: '서서울농협 두레우가 상암동'
   },
   {
     id: 2,
-    name: '마포갈비',
+    name: '상암 구름산추어탕',
     category: '한식',
-    priceRange: '비쌈',
-    searchQuery: '마포갈비 상암동'
+    specialty: '추어탕, 연잎보쌈',
+    searchQuery: '상암 구름산추어탕'
   },
   {
     id: 3,
-    name: '상암동 된장찌개',
+    name: '등촌샤브칼국수 상암점',
     category: '한식',
-    priceRange: '저렴',
-    searchQuery: '상암동 된장찌개'
+    specialty: '버섯샤브샤브, 초계국수',
+    searchQuery: '등촌샤브칼국수 상암점'
   },
   {
     id: 4,
-    name: '한우정',
+    name: '개미집',
     category: '한식',
-    priceRange: '비쌈',
-    searchQuery: '한우정 상암동'
+    specialty: '낙곱새볶음, 낙지볶음',
+    searchQuery: '개미집 상암동'
   },
   {
     id: 5,
-    name: '상암동 비빔밥',
+    name: '옥된장',
     category: '한식',
-    priceRange: '보통',
-    searchQuery: '상암동 비빔밥'
+    specialty: '소고기삼겹 된장전골, 바지락 된장전골, 수육무침',
+    searchQuery: '옥된장 상암동'
   },
-
   // 중식
   {
     id: 6,
-    name: '상암동 짜장면',
+    name: '서룡',
     category: '중식',
-    priceRange: '저렴',
-    searchQuery: '상암동 짜장면'
+    specialty: '된장짬뽕, XO볶음밥',
+    searchQuery: '서룡 상암동'
   },
   {
     id: 7,
-    name: '마라탕 전문점',
+    name: '더차이 상암 디지털큐브점',
     category: '중식',
-    priceRange: '보통',
-    searchQuery: '마라탕 상암동'
+    specialty: '간짜장, 마파두부밥',
+    searchQuery: '더차이 상암 디지털큐브점'
   },
+  // 일식
   {
     id: 8,
-    name: '상암동 탕수육',
-    category: '중식',
-    priceRange: '보통',
-    searchQuery: '상암동 탕수육'
+    name: '무다이 상암직영점',
+    category: '일식',
+    specialty: '돈코츠 라멘, 마제소바',
+    searchQuery: '무다이 상암직영점'
   },
   {
     id: 9,
-    name: '딤섬하우스',
-    category: '중식',
-    priceRange: '비쌈',
-    searchQuery: '딤섬하우스 상암동'
+    name: '하루앤소쿠 돈까스 상암점',
+    category: '일식',
+    specialty: '하루카츠, 치즈카츠',
+    searchQuery: '하루앤소쿠 돈까스 상암점'
   },
+  // 양식
   {
     id: 10,
-    name: '상암동 짬뽕',
-    category: '중식',
-    priceRange: '저렴',
-    searchQuery: '상암동 짬뽕'
+    name: '인칸토 키친',
+    category: '양식',
+    specialty: '파스타, 리조또',
+    searchQuery: '인칸토 키친 상암동'
   },
-
-  // 일식
   {
     id: 11,
-    name: '상암동 초밥',
-    category: '일식',
-    priceRange: '비쌈',
-    searchQuery: '상암동 초밥'
+    name: 'KFC 상암DMC',
+    category: '양식',
+    specialty: '징거타워버거',
+    searchQuery: 'KFC 상암DMC'
   },
+  // 동남아
   {
     id: 12,
-    name: '라멘 전문점',
-    category: '일식',
-    priceRange: '보통',
-    searchQuery: '라멘 상암동'
+    name: '온타이키친',
+    category: '동남아',
+    specialty: '팟타이, 뿌님 팟 퐁커리',
+    searchQuery: '온타이키친 상암동'
   },
   {
     id: 13,
-    name: '상암동 돈카츠',
-    category: '일식',
-    priceRange: '보통',
-    searchQuery: '상암동 돈카츠'
+    name: '하노이의아침 상암점',
+    category: '동남아',
+    specialty: '쇠고기쌀국수',
+    searchQuery: '하노이의아침 상암점'
   },
+  // 건강식
   {
     id: 14,
-    name: '우동 전문점',
-    category: '일식',
-    priceRange: '저렴',
-    searchQuery: '우동 상암동'
+    name: '포케올데이 상암점',
+    category: '건강식',
+    specialty: '포케',
+    searchQuery: '포케올데이 상암점'
   },
   {
     id: 15,
-    name: '상암동 회',
-    category: '일식',
-    priceRange: '비쌈',
-    searchQuery: '상암동 회'
+    name: '서브웨이 상암점',
+    category: '건강식',
+    specialty: '샌드위치, 샐러드',
+    searchQuery: '서브웨이 상암점'
   },
-
-  // 분식
+  // 회식
   {
     id: 16,
-    name: '상암동 떡볶이',
-    category: '분식',
-    priceRange: '저렴',
-    searchQuery: '상암동 떡볶이'
+    name: '목로',
+    category: '회식',
+    specialty: '4인 Set, 갈비살, 살치살',
+    searchQuery: '목로 상암동'
   },
   {
     id: 17,
-    name: '김밥천국',
-    category: '분식',
-    priceRange: '저렴',
-    searchQuery: '김밥천국 상암동'
-  },
-  {
-    id: 18,
-    name: '상암동 순대',
-    category: '분식',
-    priceRange: '저렴',
-    searchQuery: '상암동 순대'
-  },
-  {
-    id: 19,
-    name: '라면 전문점',
-    category: '분식',
-    priceRange: '저렴',
-    searchQuery: '라면 상암동'
-  },
-
-  // 카페
-  {
-    id: 20,
-    name: '상암동 카페',
-    category: '카페',
-    priceRange: '보통',
-    searchQuery: '상암동 카페'
+    name: '구퉁이 상암점',
+    category: '회식',
+    specialty: '소꽃갈비한판, 소갈비살',
+    searchQuery: '구퉁이 상암점'
   }
 ];
