@@ -42,3 +42,4 @@ export interface BoardFilters {
   limit: number;
 }
 
+
